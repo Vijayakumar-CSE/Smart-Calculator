@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <!-- Top Buttons -->
+        <div class="top-bar">
+            <button id="notesBtn">📝 Notes</button>
+            <button id="historyBtn">🕘 History</button>
+        </div>
+
+
+        <!-- Notes Section -->
+        <div id="notesSection" class="notes-section">
+
+            <textarea
+                id="notesInput"
+                placeholder="Why are you calculating? Example: Salary calculation...">
+            </textarea>
+
+            <div class="notes-buttons">
+                <button id="saveNotesBtn">Save</button>
+                <button id="cancelNotesBtn">Cancel</button>
+            </div>
+
+        </div>
+
+
+        <!-- Calculator Display -->
+        <div class="display">
+
+            <!-- Full calculation expression -->
+            <div id="calculation"></div>
+
+            <!-- Current / running answer -->
+            <div id="answer">0</div>
+
+        </div>
+
+
+        <!-- Calculator Buttons -->
+        <div class="buttons">
+
+            <!-- Row 1 -->
+            <button class="gray" id="clearBtn">C</button>
+            <button class="gray" data-value="%">%</button>
+            <button class="gray" data-value="÷">÷</button>
+            <button class="gray" data-value="×">×</button>
+
+
+            <!-- Row 2 -->
+            <button class="gray" data-value="7">7</button>
+            <button class="gray" data-value="8">8</button>
+            <button class="gray" data-value="9">9</button>
+            <button class="gray" data-value="−">−</button>
+
+
+            <!-- Row 3 -->
+            <button class="gray" data-value="4">4</button>
+            <button class="gray" data-value="5">5</button>
+            <button class="gray" data-value="6">6</button>
+            <button class="gray" data-value="+">+</button>
+
+
+            <!-- Row 4 -->
+            <button class="gray" data-value="1">1</button>
+            <button class="gray" data-value="2">2</button>
+            <button class="gray" data-value="3">3</button>
+            <button class="gray" data-value=".">.</button>
+
+
+            <!-- Row 5 -->
+            <button class="gray zero" data-value="0">0</button>
+
+            <!-- Equal -->
+            <button class="equal" id="equalBtn">=</button>
+
+        </div>
+
+
+        <!-- History Section -->
+        <div id="historySection" class="history-section">
+
+            <h3>Last 10 Calculations</h3>
+
+            <div id="historyList">
+                <p>No history yet.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

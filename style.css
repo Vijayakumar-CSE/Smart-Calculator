@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =========================
+   Calculator Box
+========================= */
+
+.calculator {
+    width: 360px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   Top Buttons
+========================= */
+
+.top-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.top-bar button {
+    flex: 1;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #eeeeee;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.top-bar button:hover {
+    background: #dddddd;
+}
+
+
+/* =========================
+   Notes Section
+========================= */
+
+.notes-section {
+    display: none;
+    margin-bottom: 15px;
+}
+
+.notes-section textarea {
+    width: 100%;
+    height: 80px;
+
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    resize: none;
+
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.notes-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.notes-buttons button {
+    flex: 1;
+
+    padding: 9px;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#saveNotesBtn {
+    background: #4caf50;
+    color: white;
+}
+
+#cancelNotesBtn {
+    background: #e53935;
+    color: white;
+}
+
+
+/* =========================
+   Calculator Display
+========================= */
+
+.display {
+    background: #000000;
+    color: white;
+
+    min-height: 100px;
+
+    border-radius: 12px;
+
+    margin-bottom: 15px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    overflow: hidden;
+}
+
+
+/* Expression */
+
+#calculation {
+    width: 100%;
+
+    color: #aaaaaa;
+
+    font-size: 18px;
+
+    min-height: 25px;
+
+    text-align: right;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+
+/* Answer */
+
+#answer {
+    width: 100%;
+
+    font-size: 36px;
+    font-weight: bold;
+
+    text-align: right;
+
+    white-space: nowrap;
+    overflow: hidden;
+
+    text-overflow: clip;
+}
+
+
+/* =========================
+   Calculator Buttons
+========================= */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.buttons button {
+    height: 60px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Gray Buttons */
+
+.gray {
+    background: #d3d3d3;
+    color: #222222;
+}
+
+.gray:hover {
+    background: #bbbbbb;
+}
+
+
+/* =========================
+   Clear Button
+========================= */
+
+#clearBtn {
+    background: #e53935;
+    color: white;
+}
+
+#clearBtn:hover {
+    background: #c62828;
+}
+
+
+/* =========================
+   Equal Button
+========================= */
+
+.equal {
+    background: #4caf50;
+    color: white;
+
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background: #43a047;
+}
+
+
+/* =========================
+   Zero Button
+========================= */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   History Section
+========================= */
+
+.history-section {
+    display: none;
+
+    margin-top: 20px;
+}
+
+.history-section h3 {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+}
+
+#historyList {
+    max-height: 200px;
+
+    overflow-y: auto;
+}
+
+#historyList p {
+    padding: 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 14px;
+}
